@@ -30,7 +30,7 @@ const productSchema = mongoose.Schema({
 
 //Read Product
 
-app.get('/getapi',async (req, res) => {
+app.get('/get/product',async (req, res) => {
   const product = await Product.find();
   
   res.json({ success: true,product });
