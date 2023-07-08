@@ -72,7 +72,7 @@ app.put('/update/one',async(req,res)=>{
 
 
 //deleteApi
-app.delete("/deleteapi:id", async (req, res) => {
+app.delete("/delete/api/:id", async (req, res) => {
   const product = await Product.findById(req.params.id);
 
   if(!product){
