@@ -28,7 +28,7 @@ const productSchema = mongoose.Schema({
   Price: Number,
 });
 
-//Read Product
+//Read Product from database
 
 app.get('/get/product',async (req, res) => {
   const product = await Product.find();
@@ -49,7 +49,7 @@ app.post("/postapi", (req, res) => {
 });
 
 
-//UpdateProduct
+//UpdateProduct from database
 app.put('/update/one',async(req,res)=>{
   
   let product = await Product.findById(req.params.id,req.body,{new:true,
@@ -71,7 +71,7 @@ app.put('/update/one',async(req,res)=>{
 
 
 
-//deleteApi
+//deleteApi means delete product from database
 app.delete("/delete/api/:id", async (req, res) => {
   const product = await Product.findById(req.params.id);
 
