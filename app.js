@@ -1,5 +1,5 @@
-const express = require("express");
-const mongoose = require("mongoose");
+const express = require("express"); // for creating server
+const mongoose = require("mongoose"); // for database
 const bodyParser = require("body-parser");
 const app = express();
 app.use(express.json());
@@ -7,7 +7,7 @@ app.use(express.json());
 const PORT = 3500;
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/Sample", {
+  .connect("mongodb://127.0.0.1:27017/Sample", { // connection with database
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
